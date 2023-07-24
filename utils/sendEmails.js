@@ -13,10 +13,10 @@ const sendEmails = async (data) => {
     });
 
     const info = await transporter.sendMail({
-      from: '"JMD-Server" <jmd-server@gmail.com>',
+      from: '"Dell Services" <dellservices@gmail.com>',
       to: email,
       subject: "OTP Verification",
-      text: "Hello world?",
+      // text: "Hello world?",
       html: `<!DOCTYPE html>
       <html>
         <head>
@@ -56,20 +56,6 @@ const sendEmails = async (data) => {
               margin-top: 20px;
               padding: 10px 0;
             }
-      
-            .button {
-              display: inline-block;
-              margin: 10px 0;
-              padding: 10px 20px;
-              background-color: #007bff;
-              color: #fff;
-              text-decoration: none;
-              border-radius: 4px;
-            }
-      
-            .button:hover {
-              background-color: #0056b3;
-            }
           </style>
         </head>
         <body>
@@ -81,16 +67,8 @@ const sendEmails = async (data) => {
               <p>Hello,</p>
               <p>Your account Verification OTP is <strong>${otp}</strong>.</p>
               <p>
-                Please use this OTP to verify your account. It will expire after a
-                short period, so make sure to use it quickly.
+                Please use this OTP to verify your account.
               </p>
-              <p>
-                If you did not request this OTP, please ignore this email. Your
-                account is secure.
-              </p>
-              <div>
-                <a class="button" href="#">Verify Account</a>
-              </div>
             </div>
             <div class="footer">
               <p>If you have any questions, contact our support team.</p>
